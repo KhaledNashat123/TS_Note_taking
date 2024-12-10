@@ -1,8 +1,8 @@
 {
   "scripts": {
     "build": "tsc",
-    "start": "node build/index.js",
-    "dev": "ts-node-dev src/index.ts"
+    "start": "node build/app.js",
+    "dev": "ts-node app.ts"   
   },
   "dependencies": {
     "express": "^4.21.2",
