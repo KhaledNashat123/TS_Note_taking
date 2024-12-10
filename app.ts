@@ -19,10 +19,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', router);
 
 
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-    console.error(err.stack);
-    res.status(500).send("Something wrong ");
-});
+// app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+//     console.error(err.stack);
+//     res.status(500).send("Something wrong ");
+// });
 
 app.listen(3000,()=> console.log("server is run")
 );
