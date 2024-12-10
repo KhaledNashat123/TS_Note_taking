@@ -1,7 +1,6 @@
 import express , {Request , Response , NextFunction }  from "express"
 import Note from "../models/schema";
 import connect_to_database from "../config/database"
-import { nextTick } from "process";
 
 connect_to_database();
 
@@ -22,12 +21,11 @@ router.get("/",async ( req ,res,next)=>{
 
 router.post('/', async (req : Request , res: Response, next : NextFunction) => {
     try {
-            const note : string | undefined = req.body.note
-            console.log(req.body);
-            
+        const note : string | undefined = req.body.note
 
         if(!note){
-            res.status(400).json({error : "Note is required "});
+            res.redirect("/");
+            return;
         }
 
         const newnote = new Note ({
