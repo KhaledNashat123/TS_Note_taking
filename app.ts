@@ -24,7 +24,7 @@ app.use('/', router);
 //     res.status(500).send("Something wrong ");
 // });
 
-app.listen(3000,()=> console.log("server is run")
+app.listen(3000,()=> console.log("server is running")
 );
 
 export default app ;
